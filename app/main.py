@@ -8,7 +8,7 @@ def main():
     if command == 'init':
          init()
     elif command == 'cat-file':
-         cat_file()
+         cat_file(*args)
     else:
          raise RuntimeError(f"Unknown command #{command}")
 
@@ -33,7 +33,6 @@ def cat_file(*args):
     decompressed = decompressed[8:]
 
     sys.stdout.write(decompressed)
-    
 
     
 if __name__ == "__main__":
