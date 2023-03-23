@@ -1,6 +1,6 @@
 import sys
 import os
-
+import zlib  
 
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
@@ -19,6 +19,10 @@ def main():
     else:
         raise RuntimeError(f"Unknown command #{command}")
 
+
+compressed_data = open('.git/objects', 'rb').read()  
+decompressed_data = zlib.decompress(compressed_data)  
+print(decompressed_data)  
 
 if __name__ == "__main__":
     main()
