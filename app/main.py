@@ -33,3 +33,8 @@ def cat_file(*args):
     decompressed = decompressed[8:]
 
     sys.stdout.write(decompressed)
+    
+
+    
+if __name__ == "__main__":
+     main()
